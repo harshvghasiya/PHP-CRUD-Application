@@ -1,0 +1,321 @@
+
+                <div class="content" style="margin-top:5px;">
+                    <div class="post">
+                        <h2><a href="#">Some Title</a></h2>
+                        <p><strong>Lorem Ipsum is simply dummy text of the printing and typesetting industry</strong>.
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                            unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap into electronic typesetting, remaining
+                            essentially unchanged.<strong> It was popularised in the 1960s</strong> with the release of
+                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                            software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    </div>
+                </div>
+                <div class="sidebar" style="margin-top:5px;">
+                    <div class="post">
+                        <h2><a href="#">Some Title</a></h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book. It has survived not only five
+                            centuries, but also the leap into electronic typesetting, remaining essentially unchan</p>
+                    </div>
+                </div>
+                         <img src="politicsimg/'.$pdet_id.'.jpg" style="height:450px; width:;">
+
+                         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                  <img src="..." class="d-block w-100" alt="...">
+                              </div>
+                             
+                            </div>
+                          </div>
+                          <!doctype html>
+
+ 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css" integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/js/bootstrap.min.js" integrity="sha384-XEerZL0cuoUbHE4nZReLT7nx9gQrQreJekYhJD9WNWhH8nEW+0c5qq7aIo2Wl30J" crossorigin="anonymous"></script>
+  </body>
+</html>
+<h2><a href="'.$cat_title.'.php">'.$cat_title.'</a></h2>
+<p>'.$cat_desc.'
+    </p>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-5"><b>'.   $pdet_title.'</b></h1>
+       <p><span style="color:DeepSkyBlue;"><b>Uplod Date :</b></span> '.$pdet_date.'</p>
+  
+        <div id="carouselExampleSlidesOnly" class="carousel slide my-4" data-ride="carousel" >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="politicsimg/'.$pdet_id.'.jpg" class="d-block w-100" alt="...">
+          </div>
+         
+        <?php
+        $search=$_GET['query'];
+        $sql="SELECT * FROM politic WHERE MATCH(pol_title,pol_cat) against('.$search.')";
+        $result=mysqli_query($con,$sql);
+        ?>
+        </div>
+      </div>
+
+        <p class="lead my-3" >&nbsp&nbsp'.substr($pdet_dec,0,200).',</p>
+        <p class="lead my-3" >'.substr($pdet_dec,200,500).',</p>
+        <p class="lead my-3" >'.substr($pdet_dec,500,1100).',</p>
+        <p class="lead my-3" >'.substr($pdet_dec,1100,400000).'</p>
+      </div>
+    </div>
+    <div class="tm-comment">
+                                <figure class="tm-comment-figure">
+                                    <img src="img/comment-2.jpg" alt="Image" class="mb-2 rounded-circle img-thumbnail">
+                                    <figcaption class="tm-color-primary text-center">Jewel Soft</figcaption>
+                                </figure>
+                                <p>
+                                    Nunc et eros quis enim feugiat tincidunt et vitae dui.
+                                    Nullam consectetur justo ac ex laoreet rhoncus. Nunc
+                                    id leo pretium, faucibus sapien vel, euismod turpis.
+                                </p>
+                            </div>
+                            <span class="d-block text-right tm-color-primary">June 21, 2020</span>
+                        </div>
+                        $query="INSERT INTO `comment` (`come_id`, `come_dec`, `come_by`, `come_date`) VALUES (NULL, '', 'bot', current_timestamp())";
+                        (isset($_SESSION['loggedin'])) && 
+
+
+
+                        <?php
+            
+            if($login){
+                echo'<div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>success!</strong> login sucessfully done.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>';
+            }else{
+                echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>warning!</strong> not loged in.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>';
+            }
+
+            ?>
+
+
+
+            About Page
+            <div class="row tm-row tm-mb-120">
+              <div class="col-lg-4 tm-about-col">
+                  <div class="tm-bg-gray tm-about-pad">
+                      <div class="text-center tm-mt-40 tm-mb-60">
+                          <i class="fas fa-bezier-curve fa-4x tm-color-primary"></i>
+                      </div>
+                      <h2 class="mb-3 tm-color-primary tm-post-title">Background</h2>
+                      <p class="mb-0 tm-line-height-short">
+                          Phasellus pulvinar nisl ornare leo porttitor, et vestibulum lorem semper.
+                          Duis risus ex, molestie sit amet magna in,
+                          pharetra pellentesque est. Curabitur elit metus.
+                      </p>
+                  </div>
+              </div>
+              <div class="col-lg-4 tm-about-col">
+                  <div class="tm-bg-gray tm-about-pad">
+                      <div class="text-center tm-mt-40 tm-mb-60">
+                          <i class="fas fa-users-cog fa-4x tm-color-primary"></i>
+                      </div>
+                      <h2 class="mb-3 tm-color-primary tm-post-title">Teamwork</h2>
+                      <p class="mb-0 tm-line-height-short">
+                          Suspendisse ullamcorper, mi vel molestie ornare, arcu magna euismod ipsum, in malesuada
+                          nulla magna ut enim.
+                          Morbi lacinia magna sed auctor, vitae nunc cursus.
+                      </p>
+                  </div>
+              </div>
+
+              
+              <div class="row tm-row tm-mb-60">
+                <div class="col-12">
+                    <hr class="tm-hr-primary  tm-mb-55">
+                </div>
+                <div class="col-lg-6 tm-mb-60 tm-person-col">
+                    <div class="media tm-person">
+                        <img src="img/about-02.jpg" alt="Image" class="img-fluid mr-4">
+                        <div class="media-body">
+                            <h2 class="tm-color-primary tm-post-title mb-2">XYZ</h2>
+                            <h3 class="tm-h3 mb-3">CEO/Founder</h3>
+                            <p class="mb-0 tm-line-height-short">
+                                Aliquam non vulputate lectus, vel ultricies diam. Suspendisse at ipsum
+                                hendrerit, vestibulum mi id, mattis tortor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 tm-mb-60 tm-person-col">
+                    <div class="media tm-person">
+                        <img src="img/about-03.jpg" alt="Image" class="img-fluid mr-4">
+                        <div class="media-body">
+                            <h2 class="tm-color-primary tm-post-title mb-2">XYZ</h2>
+                            <h3 class="tm-h3 mb-3">Project Director</h3>
+                            <p class="mb-0 tm-line-height-short">
+                                Quisque in bibendum elit, in egestas turpis. Vestibulum ornare sollicitudin congue.
+                                Aliquam lorem mi, maximus at iaculis ut.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 tm-mb-60 tm-person-col">
+                    <div class="media tm-person">
+                        <img src="img/about-04.jpg" alt="Image" class="img-fluid mr-4">
+                        <div class="media-body">
+                            <h2 class="tm-color-primary tm-post-title mb-2">XYZ</h2>
+                            <h3 class="tm-h3 mb-3">Supervisor</h3>
+                            <p class="mb-0 tm-line-height-short">
+                                Maecenas eu mi eu dui cursus consequat non eu metus. Morbi ac
+                                turpis eleifend, commodo purus eget, commodo mauris.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 tm-mb-60 tm-person-col">
+                    <div class="media tm-person">
+                        <img src="img/about-05.jpg" alt="Image" class="img-fluid mr-4">
+                        <div class="media-body">
+                            <h2 class="tm-color-primary tm-post-title mb-2">XYZ</h2>
+                            <h3 class="tm-h3 mb-3">Team Leader</h3>
+                            <p class="mb-0 tm-line-height-short">
+                                Integer eu sapien hendrerit,
+                                imperdiet arcu sit amet, sollicitudin ipsum.
+                                Phasellus consequat suscipit ligula eget bibendum.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           ##  data-toggle="dropdown"
+
+
+
+
+             <?php
+            
+  
+             $sql="SELECT * FROM `politic`";
+             $result=mysqli_query($con,$sql);
+             while ($row=mysqli_fetch_assoc($result)) {
+                 $pol_title=$row['pol_title'];
+                 $pol_desc=$row['pol_dec'];
+                 $pol_id=$row['pol_id'];
+                 $pol_date=$row['pol_date'];
+                 $pol_img=$row['pol_img'];
+       
+                 echo '   <div class="col-md-4 my-4">
+                 <div class="card shadow" style="width: 22rem; height:650px;">
+                 <img src="politicsimg/'.$pol_img.'" class="card-img-top" alt="...">
+                 <div class="card-body">
+                   <h5 class="card-title">'.$pol_title.'</h5>
+                   <p class="card-text">'.substr($pol_desc,0,270).'</p>
+                   <a href="post.php?getp='.$pol_id.'" class="btn btn-dark">Continue..</a>
+              
+                 </div>
+                 <hr>
+                 <p class="px-2">Date : '.$pol_date.' </p>
+               </div>
+               </div>';
+             }
+           
+           ?>
+
+
+           <?php
+            
+  
+          
+               echo '   <div class="col-md-4 my-4">
+               <div class="card shadow" style="width: 22rem; height:650px;">
+               <img src="ecoimg/'.$eco_img.'" " class="card-img-top" alt="...">
+               <div class="card-body">
+                 <h5 class="card-title">'.$eco_title.'</h5>
+                 <p class="card-text">'.substr($eco_desc,0,270).'</p>
+                 <a href="postE.php?getE='.$eco_id.'" class="btn btn-dark">Continue..</a>
+               </div>
+               <hr>
+               <p class="px-2">Date : '.$eco_date.' </p>
+             </div>
+            
+             </div>';
+           <ul class="list-unstyled f_list">
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Term &amp; conditions</a></li>
+                            <li><a href="#">Reporting</a></li>
+
+                        </ul>
+         
+   <!-- SELECT2 EXAMPLE -->
+                <div class="card card-default">
+                    <div class="card-header">
+                        <h3 class="card-title">Add Blog Tag</h3>
+
+                        <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse"><i
+                                    class="fas fa-minus"></i></button>
+
+                        </div>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Select Blog Name</label>
+                                    <form method="post" action="<?php  ?>">
+                                        <select class="form-control select2bs4" style="width: 100%;">
+                                            <?php
+                                        $sql="SELECT * FROM `politic`";
+                                        $result=mysqli_query($con,$sql);
+                                        while ($row=mysqli_fetch_assoc($result)) {
+                                            $pol_id=$row['pol_id '];
+                                            $pol_title=$row['pol_title'];
+                                           echo'<option selected="selected" name="val">'.$pol_title.'</option>';
+                                        }
+
+                                    ?>
+
+                                        </select>
+                                    </form>
+                                </div>
+                                
+
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-6">
+
+
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.card-body -->
+
+
+
+                    <!-- /.row -->
+                </div><!-- /.container-fluid -->
